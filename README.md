@@ -152,14 +152,8 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
-```
-![image](https://github.com/Munimadhuriganji/EXNO-3-DS/assets/138849444/4499229a-6989-4ffc-9ffa-f07667c5c683)
-```
 sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
 plt.show()
-```
-![image](https://github.com/Munimadhuriganji/EXNO-3-DS/assets/138849444/b2577604-c2fd-4df7-abfb-47a7640431dd)
-```
 from sklearn.preprocessing import QuantileTransformer
 qt=QuantileTransformer(output_distribution='normal',n_quantiles=891)
 
@@ -167,19 +161,18 @@ df["Moderate Negative Skew"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
-```
-![image](https://github.com/Munimadhuriganji/EXNO-3-DS/assets/138849444/ecaa11fc-4104-407b-b6ed-da159f416c53)
-```
 df["Highly Negative Skew_1"]=qt.fit_transform(df[["Highly Negative Skew"]])
 sm.qqplot(df["Highly Negative Skew"],line='45')
 plt.show()
-```
-![image](https://github.com/Munimadhuriganji/EXNO-3-DS/assets/138849444/62ca05bd-689e-4af3-9a9b-d406d99abbb0)
-```
 sm.qqplot(df["Highly Negative Skew_1"],line='45')
 plt.show()
 ```
-![image](https://github.com/Munimadhuriganji/EXNO-3-DS/assets/138849444/e797524a-8197-4137-a285-ece4334fcec4)
+
+## OUTPUT
+![ds_exp3_1](https://github.com/Thirukaalathessvarar-S/EXNO-3-DS/assets/121166390/6632f2eb-f757-4f92-84ba-e37d1550ffd9)
+![ds_exp3_2](https://github.com/Thirukaalathessvarar-S/EXNO-3-DS/assets/121166390/5a949314-8706-49e0-aa3d-7b39e891239e)
+![ds_exp3_3](https://github.com/Thirukaalathessvarar-S/EXNO-3-DS/assets/121166390/58aa9bb8-8f27-4249-a398-c1089376b17d)
+
 
 # RESULT:
 Thus the given data, Feature Encoding, Transformation process and save the data to a file was performed successfully.
